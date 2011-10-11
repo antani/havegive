@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Address:</b>
+  <%= @actor.address %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @actor.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @actor.latitude %>
+</p>
+
+<p>
+  <b>Gmaps:</b>
+  <%= @actor.gmaps %>
+</p>
+
+
+<%= link_to 'Edit', edit_actor_path(@actor) %> |
+<%= link_to 'Back', actors_path %>

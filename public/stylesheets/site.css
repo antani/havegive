@@ -1,0 +1,210 @@
+/*Specific Styles*/
+
+
+#container
+{
+    background-color: #79C3D2;
+    border-top: 8px solid #66BBCC;
+    margin: 0 auto;
+    width: 100%;
+    background: url("../images/background-repeater.png") repeat-x scroll 0 0 transparent;
+    
+}
+#user_header
+{
+  height: 50px;
+}
+#lower_container
+{
+    
+
+    background: url("/images/status_bg.png?2") no-repeat scroll center center #3C5A76;
+    border: 0 none;    
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img_tag {
+    border: medium none;
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    margin-right: 6px;
+    vertical-align: top;
+    width: 15px;
+}
+#menu {
+    background-color: #143352;
+    border-bottom: 2px solid rgba(15, 38, 61, 0.5);
+    border-top: 2px solid rgba(92, 153, 214, 0.5);
+    box-shadow: 0 0 0 #000000;
+    clear: both;
+    display: block;
+    height: 42px;
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+}
+.notice, .alert
+{
+	background-color: #79C3D2;
+
+}
+#logout_text
+{
+    color: #3C5A76;
+    cursor: default;
+    font-family: 'Lucida Grande',Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+}
+#give
+{
+	  -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #D9EEF2;
+    border-color: -moz-use-text-color #53B2C6;
+    border-left: 2px dashed #53B2C6;
+    border-right: 2px dashed #53B2C6;
+    border-style: none dashed;
+    border-width: 0 2px;
+    box-shadow: 1px 0 6px rgba(0, 0, 0, 0.5);
+    font-family: 'Droid Sans','Georgia';
+    margin-right: 5px;
+    margin-top: 10px;
+    padding: 45px 20px 23px 30px;
+    position: relative;
+    width: 845px;
+
+    z-index: 2;
+}
+
+#want
+{
+	-moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #D9EEF2;
+    border-color: -moz-use-text-color #53B2C6;
+    border-left: 2px dashed #53B2C6;
+    border-right: 2px dashed #53B2C6;
+    border-style: none dashed;
+    border-width: 0 2px;
+    box-shadow: 1px 0 6px rgba(0, 0, 0, 0.5);
+    float: left;
+    height: 80px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-right: 5px;
+    margin-top: -8px;
+    padding: 25px 0px 10px 0px;
+    position: relative;
+    /*width: 395px;
+    width: 908px;*/
+    width: 100%;
+
+    z-index: 2;
+}
+#want p, #give p
+{
+	/*font-family: 'Comfortaa','Pacifico', cursive;*/
+  font-family: 'Open Sans Condensed', sans-serif;
+	color: #143352;
+	font-size: 36px;
+	text-shadow: 0 1px 1px #E6EBE0;
+}
+.list
+{
+    margin-top: 30px;
+}
+#want li, #give li
+{
+    list-style:none;
+    font-family: 'Droid Sans','Georgia';
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+    padding-top: 3px;
+    margin: 0;
+    border-bottom: 1px dotted #555555;
+    border-top: 1px solid transparent;
+    line-height: 17px;
+    min-height: 20px;
+    opacity: 0.5;
+}
+.flash
+{
+    width: 920px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Droid Sans','Georgia';
+    text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+}
+
+.login_form, .login_form a
+{
+    font-size: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align:center;
+    color: white;
+}
+#loginbutton {
+    background: url("/images/button_submit.gif") no-repeat scroll right 0 padding-box #8BAD68;
+    border: 1px solid #2A3F56;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(255, 255, 255, 0.7) inset;
+    color: rgba(0, 0, 0, 0.63);
+    cursor: pointer;
+    display: block;
+    /*float: left;*/
+    margin: auto;
+    font-size: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    vertical-align: center;
+    font-weight: bold;
+    height: 42px;
+    width: 150px;
+    opacity: 0.9;
+    padding: 1px 45px 0 15px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.37);
+    white-space: nowrap;
+    text-decoration: none;
+
+}
+div.want input[type="text"], div.give input[type="text"] {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    font-size: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: -7px;
+    outline: 0 none;
+    padding-top: 7px;
+    width: 100%;
+    border-bottom: dotted #444444 2px;
+}
+div.divider-bar {
+    background: url("../images/bg-btn-signup.png") repeat-x scroll 0 -15px #FFAA22;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    height: 4px;
+    z-index: 4;
+}
+div.title_main
+{
+  position:absolute;
+  margin-top: 185px;
+}
+div.title_main h2
+{
+  color: #2a557e;
+  text-shadow: 0px 2px 3px #6c91b3;
+  font-family: 'Alice';
+  font-size: 120px;
+  -webkit-transform: rotate(-90deg); 
+  -moz-transform: rotate(-90deg);	
+}

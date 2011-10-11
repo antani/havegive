@@ -1,0 +1,18 @@
+<%= form_for(@give) do |f| %>
+  <% if @give.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@give.errors.count, "error") %> prohibited this give from being saved:</h2>
+
+      <ul>
+      <% @give.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :give_string %>
+  </div>
+  
+<% end %>

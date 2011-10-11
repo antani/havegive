@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @have.user_id %>
+</p>
+
+<p>
+  <b>Have category:</b>
+  <%= @have.have_category %>
+</p>
+
+<p>
+  <b>Have place:</b>
+  <%= @have.have_place %>
+</p>
+<p>
+  <b>Have string:</b>
+  <%= @have.have_string %>
+</p>
+
+
+<%= link_to 'Edit', edit_have_path(@have) %> |
+<%= link_to 'Back', haves_path %>

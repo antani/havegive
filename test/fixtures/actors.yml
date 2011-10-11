@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  address: MyString
+  longitude: 1.5
+  latitude: 1.5
+  gmaps: false
+
+two:
+  address: MyString
+  longitude: 1.5
+  latitude: 1.5
+  gmaps: false

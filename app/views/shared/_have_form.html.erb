@@ -1,0 +1,19 @@
+<%= form_for(@have) do |f| %>
+  <% if @have.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@have.errors.count, "error") %> prohibited this hafe from being saved:</h2>
+
+      <ul>
+      <% @have.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :have_string %><br />
+    <%= f.text_field :have_string %>
+  </div>
+  
+<% end %>

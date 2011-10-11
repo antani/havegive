@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @give.user_id %>
+</p>
+
+<p>
+  <b>Give category:</b>
+  <%= @give.give_category %>
+</p>
+
+<p>
+  <b>Give place:</b>
+  <%= @give.give_place %>
+</p>
+
+
+<%= link_to 'Edit', edit_gife_path(@give) %> |
+<%= link_to 'Back', gives_path %>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @ha.user_id %>
+</p>
+
+<p>
+  <b>Has string:</b>
+  <%= @ha.has_string %>
+</p>
+
+<p>
+  <b>Has category:</b>
+  <%= @ha.has_category %>
+</p>
+
+<p>
+  <b>Has place:</b>
+  <%= @ha.has_place %>
+</p>
+
+
+<%= link_to 'Edit', edit_ha_path(@ha) %> |
+<%= link_to 'Back', has_path %>

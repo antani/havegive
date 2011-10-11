@@ -1,0 +1,27 @@
+<h1>Listing gives</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Give category</th>
+    <th>Give place</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gives.each do |gife| %>
+  <tr>
+    <td><%= gife.user_id %></td>
+    <td><%= gife.give_category %></td>
+    <td><%= gife.give_place %></td>
+    <td><%= link_to 'Show', gife %></td>
+    <td><%= link_to 'Edit', edit_gife_path(gife) %></td>
+    <td><%= link_to 'Destroy', gife, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Give', new_gife_path %>

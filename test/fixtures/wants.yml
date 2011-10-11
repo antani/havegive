@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  want_string: MyString
+  want_category: MyString
+  want_place: MyString
+
+two:
+  user_id: 1
+  want_string: MyString
+  want_category: MyString
+  want_place: MyString

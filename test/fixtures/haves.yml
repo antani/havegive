@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: 1
+  have_category: MyString
+  have_place: MyString
+
+two:
+  user_id: 1
+  have_category: MyString
+  have_place: MyString

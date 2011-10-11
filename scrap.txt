@@ -1,0 +1,6 @@
+ <%= gmaps("map_options" => { "detect_location" => true,"center_on_user" => false, "auto_zoom"=>true,"zoom"=>6},
+          			
+                    "markers" => { "randomize" => false,"max_random_distance"=>100,"do_clustering" => true, "data" => @json,
+	                               "options" => {"list_container" => "markers_list" } } ) %>
+          
+          <ul id="markers_list">  </ul>

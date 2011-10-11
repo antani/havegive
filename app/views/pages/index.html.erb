@@ -1,0 +1,48 @@
+<div id="container" class="">
+<% flash.each do |key, value| %>
+  <div class="flash <%= key %>"><%= value %></div>
+<% end %> 
+<div id="user_header">
+        <% if current_user %>	       
+    			<%end%>
+</div>		
+
+
+
+	<div id="content" class="container_12">
+		<div id="want" class="want">
+
+        <div class="grid_6">
+          <p>I am stuck at...</p>
+            <%= render "shared/actor_form" %>
+        </div>
+        <div class="grid_6">  
+            <p>Search on map...</p>
+            <input id="address"  type="text"/>
+        </div>
+
+     </div>
+   </div>
+   <div class="divider-bar"></div>
+   <div class="title_main">
+     <h2>Stuck.im</h2>
+   </div>
+    <div id="lower_container"> 
+     	<div class="container_12">
+         <%= raw Cartographer::Header.new.to_s %>
+         <%= raw @map.to_html %>
+   			<div style="width:960px;height:600px;" id="map" > [Map]</div> 
+      </div>
+     <div class="login_form container_12">
+       <% if !current_user %>
+         <a href="/login" class="auth_provider"><span>Log in using twitter</span></a> if you want to automatically tweet where you are stuck.
+       <% else %>
+         <span>You are logged in as <%=current_user.name%>, <a href="/logout">Logout</a>
+           <img class="img_tag" src='<%=current_user.picture_url%>'/>
+         </span>
+
+       <%end%>
+        </div>
+    </div>
+
+</div>

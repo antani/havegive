@@ -1,0 +1,27 @@
+<h1>Listing haves</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Have category</th>
+    <th>Have place</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @haves.each do |hafe| %>
+  <tr>
+    <td><%= hafe.user_id %></td>
+    <td><%= hafe.have_category %></td>
+    <td><%= hafe.have_place %></td>
+    <td><%= link_to 'Show', hafe %></td>
+    <td><%= link_to 'Edit', edit_hafe_path(hafe) %></td>
+    <td><%= link_to 'Destroy', hafe, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Have', new_hafe_path %>

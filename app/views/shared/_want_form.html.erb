@@ -1,0 +1,17 @@
+<%= form_for(@want) do |f| %>
+  <% if @want.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@want.errors.count, "error") %> prohibited this hafe from being saved:</h2>
+      <ul>
+      <% @want.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :want_string, :value => request.location.city%>
+  </div>
+  
+<% end %>
