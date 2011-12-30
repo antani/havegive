@@ -1,5 +1,4 @@
-class User < Omnisocial::User
-  # Make any customisations here
+class User< ActiveRecord::Base
   has_many :wants
   has_many :has
 
