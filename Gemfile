@@ -1,16 +1,19 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.9'
+gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'omnisocial'
+#gem 'omnisocial'
+gem 'multi_xml', "~> 0.3.0"
+gem "socialite", "~> 0.0.1.beta4"
 gem 'jquery-rails'
 gem 'twitter'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'json'
 
 # Use unicorn as the web server
 gem 'unicorn'

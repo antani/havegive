@@ -14,4 +14,14 @@ class Actor < ActiveRecord::Base
 		location = loc[0]
   		"<span class='foo'>#{address}</span>"
 	end
+	def to_json
+		JSON.pretty_generate('markers'=> self.marker_list)
+	end	
+	def marker_list
+    {
+      'address' => self.address,
+      'latitude' => self.latitude,
+      'longitude' => self.longitude
+    }
+  end
 end
