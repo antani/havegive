@@ -1,0 +1,2 @@
+2011/10/30 21:26:36 [error] 3875#0: *4 "/home/antani/rails_projects/havegive/public/javascripts/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2011/10/30 21:26:37 [error] 3875#0: *5 "/home/antani/rails_projects/havegive/public/javascripts/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "GET / HTTP/1.1", host: "localhost:3000"

@@ -3,6 +3,10 @@
   <div class="flash <%= key %>"><%= value %></div>
 <% end %> 
 <div id="user_header">
+        <div id="logo"> 
+          <img src="/images/stuck2.png" />
+        </div>
+
         <% if current_user %>	       
     			<%end%>
 </div>		
@@ -12,21 +16,19 @@
 	<div id="content" class="container_12">
 		<div id="want" class="want">
 
-        <div class="grid_6">
+<!--        <div class="grid_6">
           <p>I am stuck at...</p>
             <%= render "shared/actor_form" %>
-        </div>
-        <div class="grid_6">  
-            <p>Search on map...</p>
+          </div>
+          -->
+          
+        <div class="grid_12">  
+            <p>Search a location on the map</p>
             <input id="address"  type="text"/>
         </div>
-
      </div>
    </div>
    <div class="divider-bar"></div>
-   <div class="title_main">
-     <h2>Stuck.im</h2>
-   </div>
     <div id="lower_container"> 
      	<div class="container_12">
          <%= raw Cartographer::Header.new.to_s %>
@@ -45,4 +47,5 @@
         </div>
     </div>
 
+    <div id="map" class="container_12"></div> 
 </div>

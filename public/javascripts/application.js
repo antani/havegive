@@ -4,6 +4,15 @@
 
 $(document).ready(function() {
 
+/*
+var leaflet_map = new L.map('map');
+var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/45f8453f62164c808d34b531a46a7bc9/997/256/{z}/{x}/{y}.png',
+    cloudmadeAttrib = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+    cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib});
+
+var london = new L.LatLng(51.505, -0.09); // geographical point (longitude and latitude)
+leaflet_map.setView(london, 13).addLayer(cloudmade);
+*/
 var originalBG = $(".list ul li").css("background-color");
 var fadeColor = "#ddd";
 
@@ -21,6 +30,7 @@ var fadeColor = "#ddd";
     $('.delete-icon').bind('ajax:success', function() {
         $(this).closest('tr').fadeOut("linear", showDeletePost);
     });
+
 
     $(function() {
       $("#address,#actor_address").autocomplete({

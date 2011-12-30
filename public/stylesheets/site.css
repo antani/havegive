@@ -114,9 +114,9 @@
 #want p, #give p
 {
 	/*font-family: 'Comfortaa','Pacifico', cursive;*/
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Contrail One','Open Sans Condensed', sans-serif;
 	color: #143352;
-	font-size: 36px;
+	font-size: 16px;
 	text-shadow: 0 1px 1px #E6EBE0;
 }
 .list
@@ -149,7 +149,7 @@
 .login_form, .login_form a
 {
     font-size: 15px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Contrail One','Open Sans Condensed', sans-serif;
     text-align:center;
     color: white;
 }
@@ -181,7 +181,7 @@ div.want input[type="text"], div.give input[type="text"] {
     background: none repeat scroll 0 0 transparent;
     border: medium none;
     font-size: 15px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Contrail One','Open Sans Condensed', sans-serif;
     margin-top: -7px;
     outline: 0 none;
     padding-top: 7px;
@@ -207,4 +207,9 @@ div.title_main h2
   font-size: 120px;
   -webkit-transform: rotate(-90deg); 
   -moz-transform: rotate(-90deg);	
+}
+#logo
+{
+  float: left;
+  size: 400px;
 }
