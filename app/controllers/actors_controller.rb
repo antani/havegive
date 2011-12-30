@@ -8,7 +8,7 @@ class ActorsController < ApplicationController
     #@json = Actor.all.to_gmaps4rails
     lat=params[:latitude]
     lon=params[:longitude]
-    @actors = Actor.near([lat.to_f,lon.to_f],5)
+    @actors = Actor.near([lat.to_f,lon.to_f],50)
     #logger.info ("Params Latitude:#{lat}")
     #logger.info ("Params Longitude:#{lon}")
     respond_to do |format|
