@@ -36,9 +36,13 @@ class ActorsController < ApplicationController
   # GET /actors/new.xml
   def new
     @actor = Actor.new
-
+    lat=params[:latitude].to_s
+    lon=params[:longitude].to_s
+    addr=Geocoder.search("#{lon},#{lat}")
+    logger.info(addr[0].address)
+    Actor.create(:longitude=>params[:longitude], :latitude => params[:latitude], :address => addr[0].address)
     respond_to do |format|
-      format.html # new.html.erb
+    #  format.html # new.html.erb
       format.xml  { render :xml => @actor }
     end
   end
@@ -51,8 +55,9 @@ class ActorsController < ApplicationController
   # POST /actors
   # POST /actors.xml
   def create
+    logger.info("in create")
     @actor = Actor.new(params[:actor])
-
+    
     respond_to do |format|
       if @actor.save
         format.html { redirect_to root_path }
