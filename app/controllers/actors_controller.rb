@@ -14,7 +14,8 @@ class ActorsController < ApplicationController
     respond_to do |format|
       #format.html # index.html.erb
       #format.xml  { render :xml => @actors }
-      format.json  { render :json => {:markers => @actors}} 
+      #format.json  { render :json => {:markers => { :lng=>@actors.longitude, :lat=>@actors.latitude}} }
+      format.json { render :json=> {:markers => @actors} }
       #respond_with(@actors)
       
     end
