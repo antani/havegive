@@ -1,18 +1,5 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
-
-
 $(document).ready(function() {
 
-/*
-var leaflet_map = new L.map('map');
-var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/45f8453f62164c808d34b531a46a7bc9/997/256/{z}/{x}/{y}.png',
-    cloudmadeAttrib = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
-    cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib});
-
-var london = new L.LatLng(51.505, -0.09); // geographical point (longitude and latitude)
-leaflet_map.setView(london, 13).addLayer(cloudmade);
-*/
 var originalBG = $(".list ul li").css("background-color");
 var fadeColor = "#ddd";
 
@@ -31,6 +18,15 @@ var fadeColor = "#ddd";
         $(this).closest('tr').fadeOut("linear", showDeletePost);
     });
 
+    $('#map').gmap().bind('init', function(evt, map) {
+      $('#map').gmap('getCurrentPosition', function(position, status) {
+        if ( status === 'OK' ) {
+          var clientPosition = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+          $('#map').gmap('addMarker', {'position': clientPosition, 'bounds': true});
+          $('#map').gmap('option', 'center', clientPosition);
+        }
+      });   
+    });
 
     $(function() {
       $("#address,#actor_address").autocomplete({
@@ -70,42 +66,5 @@ var fadeColor = "#ddd";
     //     }
     //   });
     // }); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // function gmaps4rails_callback() {
-//     Gmaps4Rails.map.setOptions({streetViewControl:false,backgroundColor:transparent});
-// }
-// gmaps4rails_callback();
-
-
-// Gmaps4Rails.customClusterer = function() {
-//   var url = "http://gmaps-utility-library.googlecode.com/svn/trunk/markerclusterer/1.0/images/";
-//   return [{
-//     url: url + 'm1.png',
-//     height: 26,
-//     width: 30,
-//   },
-//   {
-//     url: url + 'm2.png', 
-//     height: 35,
-//     width: 40,
-//   },
-//   {
-//     url: url + 'm3.png',
-//     width: 50,
-//     height: 44,
-//   }];
-// }
 
 });
