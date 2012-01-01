@@ -45,7 +45,7 @@ class ActorsController < ApplicationController
     respond_to do |format|
     #  format.html # new.html.erb
       format.xml  { render :xml => @actor }
-      format.json { render :json=> {:address => addr[0].address} }
+      format.json { render :json=> { :address => addr[0].address } }
     end
   end
 
