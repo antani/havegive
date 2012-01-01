@@ -38,7 +38,7 @@ class ActorsController < ApplicationController
     @actor = Actor.new
     lat=params[:latitude].to_s
     lon=params[:longitude].to_s
-    addr=Geocoder.search("#{lon},#{lat}")
+    addr=Geocoder.search("#{lat},#{lon}")
     logger.info(addr)
     logger.info(addr[0].address)
     Actor.create(:longitude=>params[:longitude], :latitude => params[:latitude], :address => addr[0].address )
