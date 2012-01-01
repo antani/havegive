@@ -25,7 +25,7 @@ class ActorsController < ApplicationController
   # GET /actors/1.xml
   def show
     @actor = Actor.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @actor }
@@ -39,8 +39,9 @@ class ActorsController < ApplicationController
     lat=params[:latitude].to_s
     lon=params[:longitude].to_s
     addr=Geocoder.search("#{lon},#{lat}")
+    logger.info(addr)
     logger.info(addr[0].address)
-    Actor.create(:longitude=>params[:longitude], :latitude => params[:latitude], :address => addr[0].address)
+    Actor.create(:longitude=>params[:longitude], :latitude => params[:latitude], :address => addr[0].address )
     respond_to do |format|
     #  format.html # new.html.erb
       format.xml  { render :xml => @actor }
